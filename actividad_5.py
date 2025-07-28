@@ -17,4 +17,5 @@ while True:
         case "1":
             va1= int(input("Ingrese su lista de ventas: "))
 
-        case "2"
+        case "2":
+            print("hola")
