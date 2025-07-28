@@ -12,6 +12,8 @@ while True:
     print("op.7 Clasificar cada venta: alta(>1000), medio (500-1000), baja (<500)")
     print("op.8  Salir")
 
+    op=int(input("eliga una opcion 1-8"))
+
     op= input("ingrese su opcion: ")
     match op:
         case "1":
