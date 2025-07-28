@@ -1,8 +1,9 @@
 #actividad 5 en clase
-ventas= []
+dias = []
+ventas = []
 while True:
     print("========Menu de analisis de ventas=======")
-    print("==op.1 Ingresar lista de ventas: ")
+    print("==op.1 Ingresar lista de ventas (ingrese cuantos dias desea agreagar y su respectivo monto): ")
     print("==op.2 Mostrar todas las ventas ingresadas: ")
     print("==op.3 Calcular la venta más alta y la más baja: ")
     print("==op.4 Calcular promedio de ventas: ")
@@ -14,7 +15,11 @@ while True:
     op=input("eliga una opcion 1-8")
     match op:
         case "1":
-            va1= int(input("Ingrese su lista de ventas: "))
+            dia= int(input("Cuantos dias desea ingresar?: "))
+            dias.append(dia)
+            for i in (dia):
+                cantidad_ventas= int(input(f"Ingrese cantidad de ventas del dia {i+1}: "))
+                ventas.append(cantidad_ventas) #agrega la cantidad de ventas por dia a la lista "ventas"
 
         case "2":
             print("Mostrando ventas ingresadas",ventas)
@@ -24,10 +29,9 @@ while True:
                 print("hola")
 
         case "4":
-            suma = sum(ventas)
-            cantidad_numeros = len(ventas)
-            promedio = suma / cantidad_numeros
+            promedio = sum(ventas) / len(ventas)
             print (f"El promedio de ventas es: {promedio}")
 
         case "5":
+           len
 
