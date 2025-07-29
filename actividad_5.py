@@ -30,11 +30,15 @@ while True:
                 print("No hay ventas ingresadas.")
             else:
                 for i in range (dia):
-                    print(f"Dia {i} Ventas= Q{ventas[i]}")
+                    print(f"Dia {i+1} Ventas= Q{ventas[i]}")
 
         case "3":
             for i in ventas:
-                print("hola")
+                print("\n========Calculo de ventas========")
+                venta_max = max(ventas)
+                venta_min = min(ventas)
+                print(f"La venta más alta es: Q{venta_max}")
+                print(f"La venta más baja es: Q{venta_min}")
 
         case "4":
             promedio = sum(ventas) / len(ventas)
