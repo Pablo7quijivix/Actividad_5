@@ -41,8 +41,12 @@ while True:
                 print(f"La venta más baja es: Q{venta_min}")
 
         case "4":
-            promedio = sum(ventas) / len(ventas)
-            print (f"El promedio de ventas es: {promedio}")
+            if not ventas:
+                print("No hay ventas ingresadas.")
+            else:
+                print("\n========Calculo de promedio de ventas========")
+                promedio = sum(ventas) / len(ventas)
+                print (f"El promedio de ventas es: {promedio}")
 
         case "5":
             if not ventas:
@@ -52,6 +56,37 @@ while True:
                 for venta in ventas:
                     dias_mayores_1000 +=1
                     print(f"Los dias que superaron las ventas de Q1000.00 son: {dias_mayores_1000}")
+
+        case "6":
+            print("\n========Clasificación de ventas ========")
+            if not ventas:
+                print("No hay ventas ingresadas.")
+            else:
+                for i in range(dia):
+                    if ventas[i] > 1000:
+                        clasificacion = "Alta"
+                    elif 500 <= ventas[i] <= 1000:
+                        clasificacion = "Media"
+                    else:
+                        clasificacion = "Baja"
+                    print(f"Venta del día {i + 1}: Q{ventas[i]} - Clasificación: {clasificacion}")
+        case "7":
+            print("Saliendo del programa!! Hasta pronto")
+            break
+
+        # case "6": #BUSCAR en todas las VENTAS DE LA LISTA SI EXISTE UNA EN ESPECIFICA Y VER DE QUE DIA ES
+        #     print("\n========Buscar venta específica========")
+        #     if not ventas:
+        #         print("No hay ventas ingresadas.")
+        #     else:
+        #         for i in range (dia):
+        #             print(f"Día {i + 1}: Q{ventas[i]}")
+        #     venta_especifica = int(input("Ingrese el monto de la venta que desea buscar: "))
+        #     if venta_especifica in ventas:
+        #         dia_index = ventas.index(venta_especifica)
+        #         print(f"La venta de Q{venta_especifica} es del día {dia}.")
+        #     else:
+        #         print(f"La venta de Q{venta_especifica} no se encontró en la lista.")
 
 
 
